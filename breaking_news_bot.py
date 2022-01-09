@@ -13,7 +13,7 @@ with open('breaking_news_bot.yaml') as f:
     stop_item = yml['stopItem']
     start_item = str(stop_item + 1)
     webhook_url = yml['webhookUrl']
-url = 'https://jvndb.jvn.jp/myjvn?method=getAlertList&feed=hnd&ft=json&datePublished=2021&startItem=' + start_item
+url = 'https://jvndb.jvn.jp/myjvn?method=getAlertList&feed=hnd&ft=json&datePublished=2022&startItem=' + start_item
 res = urllib.request.urlopen(url)
 cont = json.loads(res.read().decode('utf8'))
 for entry in cont['feed']['entry']:
